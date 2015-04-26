@@ -1,4 +1,4 @@
-﻿Build started 4/26/2015 2:32:44 PM.
+﻿Build started 4/26/2015 4:02:39 PM.
      1>Project "C:\Users\Adel\documents\visual studio 2010\Projects\cuda_knapsack_01\cuda_knapsack_01\cuda_knapsack_01.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\cuda_knapsack_01.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -8,81 +8,81 @@
        Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
        CudaBuild:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "C:\Users\Adel\AppData\Local\Temp\tmp4d140f0ffc1e4ea48f5145b425992809.cmd"
+         cmd.exe /C "C:\Users\Adel\AppData\Local\Temp\tmp3d6957f4ef674008992c146e9da59f47.cmd"
          "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\kernel.cu.obj "C:\Users\Adel\documents\visual studio 2010\Projects\cuda_knapsack_01\cuda_knapsack_01\kernel.cu"
          
          C:\Users\Adel\documents\visual studio 2010\Projects\cuda_knapsack_01\cuda_knapsack_01>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\kernel.cu.obj "C:\Users\Adel\documents\visual studio 2010\Projects\cuda_knapsack_01\cuda_knapsack_01\kernel.cu" 
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(80): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(86): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(92): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(98): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(104): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(110): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(120): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(123): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(126): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(129): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(132): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(135): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(80): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(86): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(92): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(98): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(104): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
      1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(110): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(120): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(123): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(126): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(129): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
-     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(132): warning : transfer of control bypasses initialization of:
+     1>C:/Users/Adel/documents/visual studio 2010/Projects/cuda_knapsack_01/cuda_knapsack_01/kernel.cu(135): warning : transfer of control bypasses initialization of:
                      variable "milliseconds"
-         (136): here
+         (139): here
          
          kernel.cu
        ManifestResourceCompile:
@@ -111,4 +111,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.79
+Time Elapsed 00:00:06.27

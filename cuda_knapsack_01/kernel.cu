@@ -19,17 +19,16 @@ __device__ int maxi(int a, int b) {
 	return (a > b)? a : b; 
 }
 
-__global__ void knapsackKernel(int *wt, int *val, int *output) {
-	int i = blockIdx.x;
-	int w = threadIdx.x + (blockIdx.x * blockDim.x);
+__global__ void knapsackKernel(int *wt, int *val, int *output, int i) {
+	int w = threadIdx.x;
 
 	__syncthreads();
-	if (i==0 || w==0)
+	if (i == 0 || w == 0)
 		output[(i*W)+w] = 0;
 	else if (wt[i-1] <= w)
 		output[(i*W)+w] = maxi(val[i-1] + output[((i-1)*W)+(w-wt[i-1])],  output[((i-1)*W)+w]);
 	else
-        output[(i*W)+w] = output[((i-1)*W)+w];
+		output[(i*W)+w] = output[((i-1)*W)+w];
 	__syncthreads();
    
 }
@@ -39,7 +38,7 @@ int main() {
     const int wt[] = { 10, 20, 30, 40, 10, 20, 30, 40, 10, 30 };
 	int *output = 0;
 
-	output = (int *)malloc( (n+1)*(W+1)*sizeof(int));
+	output = (int *)malloc((n+1)*(W+1)*sizeof(int));
 
     cudaError_t cudaStatus = knapsackCuda(output, val, wt, n);
     if (cudaStatus != cudaSuccess) {
@@ -54,7 +53,7 @@ int main() {
 				std::cout << std::endl;
 	}*/
 
-	std::cout << "Maxmimum Value possible for knapsack with capacity " << W << " is : " << output[n*W] << std::endl;
+	std::cout << "Maxmimum Value possible for knapsack with capacity " << W << " is : " << output[(n+1)*W] << std::endl;
 
     cudaStatus = cudaDeviceReset();
     if (cudaStatus != cudaSuccess) {
@@ -69,6 +68,7 @@ cudaError_t knapsackCuda(int *output, const int *val, const int *wt, unsigned in
     int *dev_val = 0;
     int *dev_wt = 0;
     int *dev_output = 0;
+	int i = 0;
     cudaError_t cudaStatus;
 	cudaEvent_t start, stop;
 	cudaEventCreate(&start);
@@ -111,7 +111,10 @@ cudaError_t knapsackCuda(int *output, const int *val, const int *wt, unsigned in
     }
 
 	cudaEventRecord(start);
-    knapsackKernel<<<n+1, W+1>>>(dev_wt, dev_val, dev_output);
+	while (i <= n) {
+		knapsackKernel<<<1, W + 1>>>(dev_wt, dev_val, dev_output, i);
+		i++;
+	}
 	cudaEventRecord(stop);
 
     cudaStatus = cudaGetLastError();
@@ -128,7 +131,7 @@ cudaError_t knapsackCuda(int *output, const int *val, const int *wt, unsigned in
 
     cudaStatus = cudaMemcpy(output, dev_output, (size + 1) * (W + 1) * sizeof(int), cudaMemcpyDeviceToHost);
     if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy 4failed!");
+        fprintf(stderr, "cudaMemcpy 4 failed!");
         goto Error;
     }
 
@@ -136,7 +139,7 @@ cudaError_t knapsackCuda(int *output, const int *val, const int *wt, unsigned in
 	float milliseconds = 0;
 	cudaEventElapsedTime(&milliseconds, start, stop);
 
-	std::cout << "Execution Time : " << milliseconds / 1000 << std::endl;
+	std::cout << "Execution Time : " << milliseconds / 1000 << " seconds" << std::endl;
 
 Error:
     cudaFree(dev_output);
